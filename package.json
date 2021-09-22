@@ -1,0 +1,36 @@
+{
+  "name": "ux-http",
+  "version": "0.0.1",
+  "description": "uniapp 请求封装",
+  "main": "./lib/index.mini.js",
+  "module": "./lib/index.esm.js",
+  "scripts": {
+    "build:rollup": "rm -fr lib && set NODE_ENV=production&& rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "uniapp",
+    "http",
+    "uniapp request",
+    "uniapp upload",
+    "uniapp download"
+  ],
+  "files": [
+    "lib",
+    "package.json"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "rollup": "^2.57.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  },
+  "sideEffects": [],
+  "author": "copy-left",
+  "license": "MIT"
+}
