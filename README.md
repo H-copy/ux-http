@@ -51,4 +51,58 @@ http.takeRequestTask('getUser').abort()
 ```
 
 
-## API
+## 扩展功能
+> 接口在原接口配置的基础上做了部分易用扩展, 新增配置属性基本基本适用独立请求配置使用。
+
+
+### base api
+- takeRequestTask(key) | 取出 task
+- interceptors.request.use(callback) | 添加请求拦截
+- interceptors.response.use(callback) | 添加响应拦截
+- interceptors.error.use(callback) | 添加错误拦截
+
+
+### base props
+- requestTaskKey : string | task缓存标记, 标记后,可通过takeRequestTask获取
+- transformRequest : array | 请求拦截队列
+- transformResponse : array | 响应拦截队列
+- transformError : array | 错误拦截队列
+- baseUrl : string | 基础地址
+- requestBefore(ctx) ：function | 请求适配器执行前钩子
+- requestAfter(task) ：function | 请求适配器执行后钩子
+
+
+### Request api
+- GET(url, query, options) get请求
+- POST(url, data, options) post请求
+- PUT(url, query, options)
+- DELETE(url, query, options)
+
+
+### UploadFile api
+- sumit(files, options) 发起上传
+
+
+### UploadFile props
+- onProgress : function | 上传进度监听
+- offProgress : function | 上传进度取消监听
+
+
+### DownloadFile api
+- sumit(fileUrl, options) 发起下载
+
+
+### DownloadFile props
+- onProgress : function | 下载进度监听
+- offProgress : function | 下载进度取消监听
+
+
+## 使用离职
+// TODO
+
+
+## 工具
+
+### 中间件
+// TODO
+
