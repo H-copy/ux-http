@@ -97,7 +97,7 @@ http.takeRequestTask('getUser').abort()
 - offProgress : function | 下载进度取消监听
 
 
-## 使用离职
+## 使用例子
 // TODO
 
 
