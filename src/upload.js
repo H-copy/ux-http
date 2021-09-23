@@ -24,14 +24,15 @@ import { BaseRequest } from './core'
 		this.offProgress = offProgress
 	}
 
-	sumit(files, options = {}){
+	sumit(file, name, options = {}){
 		const _this = this
 
-		if(files && !Array.isArray(files)){
-			options = files
+		if(file && typeof file !== 'string' ){
+			options = file
 		}else{
 			options = {
-				files,
+				filePath: file,
+				name,
 				...options
 			}
 		}

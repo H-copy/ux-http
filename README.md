@@ -17,7 +17,7 @@
 - HTTP 三模块的组合体
 
 
-## 简单例子
+## 快速入门
 ```javascript
 import { HTTP } from 'ux-http'
 
@@ -97,12 +97,23 @@ http.takeRequestTask('getUser').abort()
 - offProgress : function | 下载进度取消监听
 
 
-## 使用例子
+## 全局拦截队列
+全局拦截队列( request, response, error )由`PromiseQueue`管理, 提供部分类数组功能。
+
+- use(callback) 向拦截队列末尾追加拦截器
+- push(...callbackList) 向拦截队列末尾追加一个或多个拦截器
+- unshift(...callbackList) 向拦截队列开头添加一个或多个拦截器
+- inset(position, ...callbackList) 向拦截队列指定位置插入一个或多个拦截器
+- remove(callback) 移除拦截器
+- queue() 获取当前拦截队列, 浅拷贝
+- withBefore(cb) 执行队列后调用cb, cb 不会缓存到队列中
+- withAfter(cb)  执行队列前调用cb, cb 不会缓存到队列中
+
+
+## 进阶使用
 // TODO
 
 
 ## 工具
-
-### 中间件
 // TODO
 
